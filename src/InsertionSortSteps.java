@@ -25,12 +25,15 @@ public class InsertionSortSteps {
     }
 
     public static void printArray(int[] arr) {
+        StringBuilder sb = new StringBuilder();
+
         for (int i = 0; i < arr.length; i++) {
-            if (i == arr.length - 1)
-                System.out.print(arr[i]);  // no space after last element
-            else
-                System.out.print(arr[i] + " ");
+            sb.append(arr[i]);
+            if (i != arr.length - 1) {
+                sb.append(" ");
+            }
         }
-        System.out.println();
+
+        System.out.println(sb.toString());
     }
 }
