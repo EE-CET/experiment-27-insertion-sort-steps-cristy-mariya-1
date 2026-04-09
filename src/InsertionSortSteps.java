@@ -14,21 +14,22 @@ public class InsertionSortSteps {
         int e = arr[n - 1];
         int i = n - 2;
 
-        // Shift elements
         while (i >= 0 && arr[i] > e) {
             arr[i + 1] = arr[i];
             printArray(arr);
             i--;
         }
 
-        // Insert element
         arr[i + 1] = e;
         printArray(arr);
     }
 
     public static void printArray(int[] arr) {
-        for (int x : arr) {
-            System.out.print(x + " ");
+        for (int i = 0; i < arr.length; i++) {
+            if (i == arr.length - 1)
+                System.out.print(arr[i]);  // no space after last element
+            else
+                System.out.print(arr[i] + " ");
         }
         System.out.println();
     }
